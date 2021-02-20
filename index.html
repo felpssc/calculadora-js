@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Calculadora 📱</title>
+<body>
+  <div class="calculator-container">
+    <div class="header">
+      <input placeholder="0" id="history" value="" type="text" readonly>
+      <input placeholder="0" id="output" value="" type="text" readonly="true">
+    </div>
+    <div class="input-area">
+      <table>
+        <tr>
+          <td> <button class="btn btn-clear">C</button> </td>
+          <td> <button value="(" class="btn btn-numbers numbers" >(</button> </td>
+          <td> <button value=")" class="btn btn-numbers numbers">)</button> </td>
+          <td> <button value="/" class="btn btn-operations operations">/</button> </td>
+        </tr>
+        <tr>
+          <td> <button value="7" class="btn btn-numbers numbers">7</button> </td>
+          <td> <button value="8" class="btn btn-numbers numbers">8</button> </td>
+          <td> <button value="9" class="btn btn-numbers numbers">9</button> </td>
+          <td> <button value="*" class="btn btn-operations operations">X</button> </td>
+        </tr>
+        <tr>
+          <td> <button value="4" class="btn btn-numbers numbers">4</button> </td>
+          <td> <button value="5" class="btn btn-numbers numbers">5</button> </td>
+          <td> <button value="6" class="btn btn-numbers numbers">6</button> </td>
+          <td> <button value="-" class="btn btn-operations operations">-</button> </td>
+        </tr>
+        <tr>
+          <td> <button value="1" class="btn btn-numbers numbers">1</button> </td>
+          <td> <button value="2" class="btn btn-numbers numbers">2</button> </td>
+          <td> <button value="3" class="btn btn-numbers numbers">3</button> </td>
+          <td> <button value="+" class="btn btn-operations operations">+</button> </td>
+        </tr>
+        <tr>
+          <td> <button value="0"  class="btn btn-numbers zero numbers">0</button> </td>
+          <td></td>
+          <td><button value="." class="btn btn-numbers numbers">.</button></td>
+          <td><button class="btn btn-result">=</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
+  <h5>🚀 Feito por <a target="_blank" href="https://github.com/felpssc">Felipe Silva</a> ;)</h5>
+  <script src="script.js"></script>
+</body>
+</html>

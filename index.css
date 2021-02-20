@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #222427;
+  font-weight: 500;
+}
+
+a {
+  color: #bb403ead;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(226, 226, 226);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.calculator-container {
+  width: 350px;
+  height: 85vh;
+  background-color: #17181A;
+  border-radius: 20px;
+  box-shadow: -1px 2px 20px rgb(116, 116, 116);
+  overflow: auto;
+}
+
+
+input {
+  outline: none;
+  border: none;
+  cursor: text;
+  width: 300px;
+  padding: 5px 50px 5px 0px;
+  height: 50px;
+  background-color: #212326;
+  text-align: right;
+}
+
+#output {
+  font-size: 42px;
+  color: whitesmoke;
+}
+
+#history {
+  font-size: 18px;
+  color: rgba(197, 197, 197, 0.589);
+}
+
+table {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.btn {
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 18px;
+  margin: 5px;
+  outline: none;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+}
+
+.btn:active {
+  box-shadow: 0px 0px 3px whitesmoke;
+}
+
+.btn-numbers {
+  background-color: #222427;
+}
+
+.btn-operations {
+  background-color: #F49418;
+  font-weight: bold;
+}
+
+.zero {
+  width: 180%;
+}
+
+.btn-result {
+  background-color: #67CA74;
+  font-size: 20px;
+}
+
+.btn-clear {
+  background-color: #2D191E;
+  color: #BB403E;
+}
