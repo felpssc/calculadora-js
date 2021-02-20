@@ -4,25 +4,13 @@ const historyInput = document.getElementById('history');
 const buttonResult = document.querySelector('.btn-result');
 const operations = document.querySelectorAll('.operations');
 var showedResult = false;
-var sameOperation = true;
+var sameOperation = false;
 
 function start() {
   listenNumbers();
   listenOperations();
   clear();
   result();
-}
-
-function getOutputValue() {
-  return output.value;
-}
-
-function setOutputValue(value) {
-  output.value = value;
-}
-
-function getHistoryValue() {
-  return historyInput.value;
 }
 
 function setHistoryValue(value) {
@@ -32,6 +20,7 @@ function setHistoryValue(value) {
 function clear() {
  const clearButton = document.querySelector('.btn-clear');
  clearButton.addEventListener('click', () => {
+   sameOperation = true;
    output.value = '';
    historyInput.value = '';
  })
@@ -40,14 +29,20 @@ function clear() {
 function listenNumbers() {
   numbers.forEach(number => {
     number.addEventListener('click', () => {
-      if(showedResult) {
-        historyInput.value = '';
+      if(!sameOperation && showedResult) {
         output.value = '';
-        showedResult = false;
+        historyInput.value = '';
+        output.value += number.value;
+        setHistoryValue(output.value);
+        return
+
       }
 
-      if(!sameOperation){
+      if(showedResult && sameOperation) {
         output.value = '';
+        output.value += number.value;
+        showedResult = false;
+        sameOperation = false;
       } else {
         output.value += number.value;
       }
@@ -58,8 +53,12 @@ function listenNumbers() {
 function listenOperations() {
   operations.forEach(operation => {
     operation.addEventListener('click', () => {
+      if(sameOperation) {
+        output.value = '';
+      }
+
       if(showedResult) {
-        showedResult = false;
+        sameOperation = true;
         setHistoryValue(` ${operation.value}`);
       } else {
         setHistoryValue(` ${output.value} ${operation.value}`);
