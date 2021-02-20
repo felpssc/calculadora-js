@@ -29,6 +29,12 @@ function clear() {
 function listenNumbers() {
   numbers.forEach(number => {
     number.addEventListener('click', () => {
+      if(showedResult === true && sameOperation === false) {
+        output.value = '';
+        historyInput.value = '';
+        sameOperation = true;
+      }
+
       if(!sameOperation && showedResult) {
         output.value = '';
         historyInput.value = '';
