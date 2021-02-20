@@ -100,7 +100,7 @@ table {
 
 @media (max-width: 425px) {
   .calculator-container {
-    height: 80vh;
+    height: 90vh;
   }
 
   table {
