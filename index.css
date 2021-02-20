@@ -97,3 +97,13 @@ table {
   background-color: #2D191E;
   color: #BB403E;
 }
+
+@media (max-width: 425px) {
+  .calculator-container {
+    height: 80vh;
+  }
+
+  table {
+    margin: 30px auto;
+  }
+}
