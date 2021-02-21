@@ -82,10 +82,14 @@ function result() {
     if(!output.value && !historyInput.value) {
       return;
     }
-    var string = historyInput.value + output.value;
-    historyInput.value = eval(string);
-    output.value = historyInput.value;
-    showedResult = true;
+    try {
+      var string = historyInput.value + output.value;
+      historyInput.value = eval(string);
+      output.value = historyInput.value;
+      showedResult = true;
+    } catch(error) {
+      output.value = 'error';
+    }
   });
 }
 
